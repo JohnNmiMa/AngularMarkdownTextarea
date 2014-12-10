@@ -1,0 +1,16 @@
+<form>
+    <button type="button" class="btn toggleEdit btn-primary"
+            ng-click="toggleEdit(snippetData)"> {{isEditing ? 'Save' : 'Edit'}} </button>
+    <button type="button" class="btn cancelEdit btn-primary"
+            ng-click="cancelEdit()"> Cancel </button>
+    <div class="MarkDown"ng-class="{'showOutline': (isEditing && isPreviewing)}">
+        <textarea ng-model="snippetData.text"
+                  ng-show="isEditing && !isPreviewing"
+                  placeholder="Add text description here"></textarea>
+        <markdown markdown-model="snippetData.text"
+                  ng-show="!isEditing || (isEditing && isPreviewing)"></markdown>
+        <button type="button" class="btn btn-default btn-xs togglePreview"
+                ng-show="isEditing"
+                ng-click="togglePreview()"> {{isPreviewing ? 'Edit' : 'Preview' }} </button>
+    </div>
+</form>

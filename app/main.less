@@ -1,0 +1,81 @@
+@user-snippet-code-color:#e3e3bb;
+@public-snippet-code-color:#fbcb9c;
+@des-font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+@code-font-family:Menlo, Monaco, Consolas, "Courier New", monospace;
+
+body {
+    padding-bottom:30px;
+}
+
+#container {
+    position: relative;
+    margin:auto;
+    width: 75%;
+    margin-top:30px;
+}
+    .btn {
+        outline: none !important;
+    }
+    .btn.toggleEdit {
+        width:58px;
+    }
+
+.MarkDown {
+    position: relative;
+    height:auto;
+    min-height:44px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border:1px solid transparent;
+}
+    .MarkDown.showOutline {
+        border:1px solid black;
+    }
+    .MarkDown textarea {
+        width:100%;
+        height:100%;
+        resize: vertical;
+        border-radius: 4px;
+    }
+    .MarkDown .togglePreview {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        width:55px;
+        background-color: transparent;
+        border-width: 2px;
+    }
+        .MarkDown .togglePreview:active {
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+        }
+
+    .MarkDown h1, .MarkDown h2, .MarkDown h3,
+    .MarkDown h4, .MarkDown h5, .MarkDown h6 {
+        margin-top:0.75em;
+        margin-bottom:0;
+    }
+    .MarkDown p {
+        margin-top: 0.75em;
+        margin-bottom: 0;
+    }
+    .MarkDown ul, .MarkDown ol {
+        -webkit-margin-before: 0;
+        -webkit-margin-after: 0;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        list-style-position: outside;
+    }
+    .MarkDown ul {
+        list-style-type: disc;
+        -webkit-padding-start: 15px;
+    }
+    .MarkDown ol {
+        list-style-type: decimal;
+        -webkit-padding-start: 20px;
+    }
+    .MarkDown ul ul ol, .MarkDown ul ol ol,
+    .MarkDown ol ol, .MarkDown ol ul ol {
+        list-style-type: lower-alpha;
+    }
