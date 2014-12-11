@@ -4,7 +4,7 @@
     <button type="button" class="btn cancelEdit btn-primary"
             ng-show="isEditing"
             ng-click="cancelEdit()"> Cancel </button>
-    <div class="MarkDown"ng-class="{'showOutline': (isEditing && isPreviewing)}">
+    <div class="TextArea MarkDown" ng-class="{'showOutline': (isEditing && isPreviewing)}">
         <textarea ng-model="snippetData.text"
                   ng-show="isEditing && !isPreviewing"
                   placeholder="Add text description here"></textarea>
